@@ -1,0 +1,112 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+nav::after, p::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+nav a:focus, button:focus {
+	outline: none;
+	box-shadow: 0 0 0 5px #ccc;
+}
+
+button::-moz-focus-inner {
+	border: 0;
+}
+
+p a:focus {
+	outline: none;
+	text-decoration: underline;
+}
+
+body {
+	width: 80%;
+	margin: 40px auto;
+	font: 24px/1 'Roboto', sans-serif;
+	color: #666;
+}
+
+nav {
+	margin: 0 -10px 40px;
+}
+
+nav a {
+	float: left;
+	padding: 10px 20px;
+	margin: 0 10px 15px;
+	border-radius: 5px;
+	text-decoration: none;
+	line-height: 120%;
+	color: #fff;
+	background-color: #666;
+}
+
+.current {
+	position: relative;
+	background-color: #3c6492;
+}
+
+.current::after {
+	content: '';
+	display: block;
+	position: absolute;
+	left: calc(50% - 10px);
+	bottom: -9px;
+	border-top: solid 10px #3c6492;
+	border-left: solid 10px transparent;
+	border-right: solid 10px transparent;
+}
+
+h1 {
+	margin: 0;
+	color: #3c6492;
+	font-size: 2em;
+	line-height: 120%;
+}
+
+p {
+	margin-top: 40px;
+	line-height: 140%;
+}
+
+p a {
+	color: #3c6492;
+	text-decoration: none;
+}
+
+button {
+	float: left;
+	width: 80px;
+	height: 80px;
+	padding: 0;
+	margin: 0;
+	border: none;
+	border-radius: 50%;
+	font-size: 1em;
+	color: #fff;
+	background-color: #58923c;
+	cursor: pointer;
+}
+
+.wait {
+	background-color: #923c4e;
+}
+
+.pellet {
+	float: left;
+	width: 40px;
+	height: 40px;
+	margin: 20px 0 20px 60px;
+	border-radius: 50%;
+	line-height: 40px;
+	text-align: center;
+	color: #fff;
+	background-color: #ccc;
+}
+
+.lit {
+	background-color: #58923c;
+}
